@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    let myArray = [1, 3, 5, 7, 9, 11];
+    let viTriT1 = 0;
+    let viTriCuoi = myArray.length - 1;
+    while (viTriT1 < viTriCuoi) {
+        let i = myArray[viTriT1];
+        myArray[viTriT1] = myArray[viTriCuoi];
+        myArray[viTriCuoi] = i;
+        viTriT1++;
+        viTriCuoi--;
+    }
+    document.write(myArray);
+</script>
