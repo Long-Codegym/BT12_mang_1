@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h2>Sample Screen:</h2>
+<input id="nValue" type="text">
+<input onclick="add()" type="button" value="thêm phần tử">
+<input onclick="display()" type="button" value="in ra màn hình">
+<div id="kQ"></div>
+</body>
+</html>
+
+<script>
+    let a = 0;
+    let myArray = new Array();
+
+    function add() {
+        myArray[a] = document.getElementById("nValue").value;
+        alert(myArray + "vị trí phần tử" + a);
+        a++;
+        document.getElementById("nValue ").value = "";
+    }
+
+    function display() {
+        let b = "<hr/>";
+        for (let i = 0; i < myArray.length; i++) {
+            b +=  i + " = " + myArray[i] + "<br/>";
+        }
+        document.getElementById("kQ").innerHTML = b;
+    }
+</script>
